@@ -1,0 +1,238 @@
+/*RESET-CONFIG-CSS*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+/*HEADER STYLE*/
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+}
+/*LOGO STYLE*/
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #bfa288;
+}
+
+/*NAV LIST STYLE*/
+.nav-list {
+    display: flex;
+    color: #bfa288;
+}
+
+.nav-list a{
+    color: #bfa288;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+}
+
+.nav-list a:hover{
+    border-bottom: 2px solid #bfa288;
+}
+
+#menu-icon {
+    color: #bfa288;
+    font-size: 30px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+/*CUP-BODY*/
+.cup {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(148deg, rgba(0,0,0,1) 0%, rgba(89,53,39,1) 36%, rgba(140,122,112,1) 68%, rgba(191,162,136,1) 100%);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+/*SECTION*/
+section {
+    padding: 0 19%;
+}
+
+/*CUP STYLE*/
+.cup-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: #bfa288;
+    margin-bottom: 40px;
+}
+.cup-text h1{
+    font-size: 60px;
+    line-height: 1;
+    color: #bfa288;
+    margin: 0 0 40px;
+}
+.cup-text h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: #bfa288;
+    margin-bottom: 10px;
+}
+.cup-text p{
+    color: #bfa288;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+.cup-img {
+    width: 400px;
+    height: auto;
+}
+.cup-text a{
+    display: inline-block;
+    color: #bfa288;
+    background: #55311f;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transform: all .40s ease;
+}
+.cup-text a:hover{
+    background: transparent;
+    border: 2px solid #593527;
+    transform: translateX(2px);
+}
+.cup-text a.qrcode{
+    border: 2px solid #593527;
+    margin-left: 5px;
+}
+.cup-text a.qrcode i{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+/*ICON STYLE*/
+.icons {
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%); 
+}
+.icons i{
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    color: #bfa288;
+    transition: all .50s ease;
+}
+.icons i:hover{
+    color: #593527;
+    transform: translateY(-5px);
+}
+/*FINAL ADJUSTMENTS*/
+@media (max-width: 1535px){
+    header{
+        padding: 15px 3%;
+        transition: .2s;
+    }
+    .icons{
+        padding: 0 3%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1460px){
+    section{
+        padding: 0 12%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1340px){
+    .cup-img img{
+        width: 100%;
+        height: auto;
+    }
+    .cup-text h1{
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+    .cup-text h5{
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 1195px){
+    section{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .cup-text{
+        padding-top: 115px;
+    }
+    .cup-img{
+        text-align: center;
+    }
+    .cup-img img{
+        width: 560px;
+        height: auto;
+    }
+    .cup{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .icons{
+        display: none;
+    }
+}
+
+@media (max-width: 900px){
+    #menu-icon{
+        display: block;
+    }
+    .nav-list{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200px;
+        height: 30vh;
+        background: rgba(106, 84, 75, 0.292);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .nav-list a{
+        margin-left: 0;
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .nav-list.open {
+        right: 0;
+    }
+}
+
+@media (max-width: 680px){
+    .cup-img img{
+        width: 100%;
+        height: auto;
+    }
+}
